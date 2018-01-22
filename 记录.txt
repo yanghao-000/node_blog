@@ -1,0 +1,40 @@
+cnpm init -y
+cnpm install body-parser  cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap jquery popper.js --save
+
+创建并初始git
+git init
+git add -A
+git commit -m"1. 初始化项目和依赖的模块"
+git remote add origin https://github.com/zhufengnodejs/201701blog.git
+git push origin master
+创建服务
+express + mongoose
+
+let express = require('express');
+let app = express();
+
+app.listen(8080);
+跑通路由
+引入模板引擎
+编写步骤
+初始化项目和依赖的模块
+跑通路由
+使用bootstrap渲染模板
+实现用户注册的功能
+实现用户的登录功能
+实现会话功能并控制菜单显示
+增加登录状态判断中间件
+成功和失败时的消息提示
+实现上传头像并在导航的右上角显示个人信息
+在注册表单增加一个头像的字段
+给表单增加一个属性 enctype="multipart/form-data"
+在user路由中引入multer中间件,并在注册请求中用此中间件解析请求体得到req.file和req.body
+拼出avatar图片路径并赋给req.body对象
+在User模型中添加avatar属性
+新增发表文章
+首页显示文章列表
+编写文章详情页
+删除文章
+更新文章
+实现搜索功能
+实现分页的功能
