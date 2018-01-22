@@ -1,40 +1,41 @@
-cnpm init -y
-cnpm install body-parser  cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap jquery popper.js --save
+ï»¿cnpm init -y
+cnpm install body-parser cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap jquery popper.js --save
 
-´´½¨²¢³õÊ¼git
+åˆ›å»ºå¹¶åˆå§‹git
 git init
 git add -A
-git commit -m"1. ³õÊ¼»¯ÏîÄ¿ºÍÒÀÀµµÄÄ£¿é"
+git commit -m"1. åˆå§‹åŒ–é¡¹ç›®å’Œä¾èµ–çš„æ¨¡å—"
 git remote add origin https://github.com/zhufengnodejs/201701blog.git
 git push origin master
-´´½¨·şÎñ
+åˆ›å»ºæœåŠ¡
 express + mongoose
 
 let express = require('express');
 let app = express();
 
 app.listen(8080);
-ÅÜÍ¨Â·ÓÉ
-ÒıÈëÄ£°åÒıÇæ
-±àĞ´²½Öè
-³õÊ¼»¯ÏîÄ¿ºÍÒÀÀµµÄÄ£¿é
-ÅÜÍ¨Â·ÓÉ
-Ê¹ÓÃbootstrapäÖÈ¾Ä£°å
-ÊµÏÖÓÃ»§×¢²áµÄ¹¦ÄÜ
-ÊµÏÖÓÃ»§µÄµÇÂ¼¹¦ÄÜ
-ÊµÏÖ»á»°¹¦ÄÜ²¢¿ØÖÆ²Ëµ¥ÏÔÊ¾
-Ôö¼ÓµÇÂ¼×´Ì¬ÅĞ¶ÏÖĞ¼ä¼ş
-³É¹¦ºÍÊ§°ÜÊ±µÄÏûÏ¢ÌáÊ¾
-ÊµÏÖÉÏ´«Í·Ïñ²¢ÔÚµ¼º½µÄÓÒÉÏ½ÇÏÔÊ¾¸öÈËĞÅÏ¢
-ÔÚ×¢²á±íµ¥Ôö¼ÓÒ»¸öÍ·ÏñµÄ×Ö¶Î
-¸ø±íµ¥Ôö¼ÓÒ»¸öÊôĞÔ enctype="multipart/form-data"
-ÔÚuserÂ·ÓÉÖĞÒıÈëmulterÖĞ¼ä¼ş,²¢ÔÚ×¢²áÇëÇóÖĞÓÃ´ËÖĞ¼ä¼ş½âÎöÇëÇóÌåµÃµ½req.fileºÍreq.body
-Æ´³öavatarÍ¼Æ¬Â·¾¶²¢¸³¸øreq.body¶ÔÏó
-ÔÚUserÄ£ĞÍÖĞÌí¼ÓavatarÊôĞÔ
-ĞÂÔö·¢±íÎÄÕÂ
-Ê×Ò³ÏÔÊ¾ÎÄÕÂÁĞ±í
-±àĞ´ÎÄÕÂÏêÇéÒ³
-É¾³ıÎÄÕÂ
-¸üĞÂÎÄÕÂ
-ÊµÏÖËÑË÷¹¦ÄÜ
-ÊµÏÖ·ÖÒ³µÄ¹¦ÄÜ
+
+è·‘é€šè·¯ç”±
+å¼•å…¥æ¨¡æ¿å¼•æ“
+ç¼–å†™æ­¥éª¤
+åˆå§‹åŒ–é¡¹ç›®å’Œä¾èµ–çš„æ¨¡å—
+è·‘é€šè·¯ç”±
+ä½¿ç”¨bootstrapæ¸²æŸ“æ¨¡æ¿
+å®ç°ç”¨æˆ·æ³¨å†Œçš„åŠŸèƒ½
+å®ç°ç”¨æˆ·çš„ç™»å½•åŠŸèƒ½
+å®ç°ä¼šè¯åŠŸèƒ½å¹¶æ§åˆ¶èœå•æ˜¾ç¤º
+å¢åŠ ç™»å½•çŠ¶æ€åˆ¤æ–­ä¸­é—´ä»¶
+æˆåŠŸå’Œå¤±è´¥æ—¶çš„æ¶ˆæ¯æç¤º
+å®ç°ä¸Šä¼ å¤´åƒå¹¶åœ¨å¯¼èˆªçš„å³ä¸Šè§’æ˜¾ç¤ºä¸ªäººä¿¡æ¯
+åœ¨æ³¨å†Œè¡¨å•å¢åŠ ä¸€ä¸ªå¤´åƒçš„å­—æ®µ
+ç»™è¡¨å•å¢åŠ ä¸€ä¸ªå±æ€§ enctype="multipart/form-data"
+åœ¨userè·¯ç”±ä¸­å¼•å…¥multerä¸­é—´ä»¶,å¹¶åœ¨æ³¨å†Œè¯·æ±‚ä¸­ç”¨æ­¤ä¸­é—´ä»¶è§£æè¯·æ±‚ä½“å¾—åˆ°req.fileå’Œreq.body
+æ‹¼å‡ºavatarå›¾ç‰‡è·¯å¾„å¹¶èµ‹ç»™req.bodyå¯¹è±¡
+åœ¨Useræ¨¡å‹ä¸­æ·»åŠ avatarå±æ€§
+æ–°å¢å‘è¡¨æ–‡ç« 
+é¦–é¡µæ˜¾ç¤ºæ–‡ç« åˆ—è¡¨
+ç¼–å†™æ–‡ç« è¯¦æƒ…é¡µ
+åˆ é™¤æ–‡ç« 
+æ›´æ–°æ–‡ç« 
+å®ç°æœç´¢åŠŸèƒ½
+å®ç°åˆ†é¡µçš„åŠŸèƒ½
