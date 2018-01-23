@@ -1,5 +1,6 @@
 let express = require('express');
 let path = require('path');
+let bodyParser = require('body-parser');
 let app = express();
 //设置模板引擎html
 app.set('view engine', 'html');
@@ -9,6 +10,8 @@ app.set('views', path.resolve('views'));
 app.engine('html', require('ejs').__express);
 //此静态文件中间件会拦截客户端对于静态文件的请求，在指定目录下找，如果找到返回并结束请求
 app.use(express.static(path.resolve('node_modules')));
+//解析客户端请求过来的请求体并转成对象赋值给req.body
+app.use(bodyParser.urlencoded({extended: true}));
 
 let index = require('./router/index.js');
 let user = require('./router/user.js');
