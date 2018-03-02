@@ -1,5 +1,6 @@
-﻿cnpm init -y
-cnpm install body-parser cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap jquery popper.js --save
+﻿https://github.com/zhufengnodejs/201701blog
+cnpm init -y
+cnpm install body-parser cookie-parser debug ejs express morgan serve-favicon express-session connect-mongo mongoose connect-flash multer async bootstrap jquery popper.js -S
 
 创建并初始git
 git init

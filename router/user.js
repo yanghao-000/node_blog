@@ -17,16 +17,33 @@ router.get('/signin', function (req, res) {
 });
 
 router.get('/signout', function (req, res) {
-   res.send("退出")
+   req.session.user = null;
+   res.redirect('/user/signin');
 });
-
+// 用户注册
 router.post('/signup', function (req, res) {
    let user = req.body;
    User.create(user, function (err, doc) {
       if (err) {
-         res.redireact('back');
+         res.redirect('back');
       } else {
-         res.redireact('/user/signin');
+         res.redirect('/user/signin');
+      }
+   });
+});
+// 用户登录
+router.post('/signin', function (req, res) {
+   let user = req.body;
+   User.findOne(user, function(err, doc){
+      if (err) {
+         res.redirect('back');
+      } else {
+         if(doc){
+            req.session.user = doc;
+            res.redirect('/');
+         }else{
+            res.redirect('back');
+         }
       }
    });
 });

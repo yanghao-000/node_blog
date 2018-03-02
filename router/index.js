@@ -3,10 +3,10 @@ let express = require('express');
 let router = express.Router();
 
 router.get('/', function (req, res) {
-   //路由是相对路径
+   //index为模板路径 模板根目录已经设置为view  路由是相对路径
    res.render('index', {
       title: "首页"
-   })
+   });
    //res.send('首页');
 });
 
